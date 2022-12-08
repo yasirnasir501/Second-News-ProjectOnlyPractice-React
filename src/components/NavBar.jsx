@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
-
 export class NavBar extends Component {
     render() {
         return (
             <div>
+              
                 <nav className="navbar navbar-expand-lg bg-dark">
                     <div className="container-fluid">
                         <Link className="navbar-brand text-light" to="/">Weather News</Link>
