@@ -6,7 +6,7 @@ export class newsitem extends Component {
     return (
       <div className='my-3'>
         <div className="card">
-        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:"90%", zindex:"1"}}>
+        <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:'90%', zindex:'1'}}>
               {source}
             </span>
           <img src={!imageUrl ? 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397187658/58f46a72c6d12e9708723f3df47e8014.jpg' : imageUrl} className="card-img-top" alt="..." />
