@@ -5,17 +5,27 @@ import Spinner from './Spinner'
 
 
 export class news extends Component {
+      capitalizeFirstLetter = (string) => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+      }
 
-  constructor() {
+
+  constructor(props) {
     // console.log("Check Display Articles")
-    super();
+    super(props);
     this.state = {
       articles: [],
       loading: false,
       page: 1,
       category: 'general',
     }
+    document.title = `${this.capitalizeFirstLetter(this.props.category)} - Weather News`
   }
+
+
+
+ 
+
 
 
   async updateNews(){
@@ -52,7 +62,7 @@ export class news extends Component {
   render() {
     return (
       <div className='container my-3'>
-        <h2 className='text-center' style={{margin:'35px 0px'}}>Weather News - Top Headlines</h2>
+        <h2 className='text-center' style={{margin:'35px 0px'}}>Weather News - Top {this.capitalizeFirstLetter(this.props.category)}</h2>
        {this.state.loading && <Spinner />};
         <div className='row'>
           {!this.state.loading && this.state.articles.map((element) => {
